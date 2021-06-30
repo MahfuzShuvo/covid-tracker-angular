@@ -1,0 +1,29 @@
+<div class="nav-bar">
+    <nav>
+        <div class="logo">
+            <a routerLink='/'>
+                <img src="../../../assets/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="toggle-btn" (click)="toggleNavbar()">
+            <i [ngClass]="[!isNavbarOpen ? 'fa fa-bars' : 'fa fa-times']"></i>
+        </div>
+        <div class="menu">
+            <ul [ngClass]="{'show' : isNavbarOpen}">
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:
+                    true}">
+                    <a routerLink='/'>Home</a>
+                </li>
+                <li [routerLinkActive]="['active']">
+                    <a routerLink='/countries'>Countries</a>
+                </li>
+                <li [routerLinkActive]="['active']">
+                    <a routerLink='/about'>About</a>
+                </li>
+                <li [routerLinkActive]="['active']">
+                    <a routerLink='/contact'>Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>

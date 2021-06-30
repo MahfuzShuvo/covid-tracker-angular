@@ -1,0 +1,130 @@
+@import '/src/styles.scss';
+
+.nav-bar {
+    background: $primary-color;
+    display: flow-root;
+    padding: 0 10%;
+    box-shadow: 0 0 5px 2px #ccc;
+    .logo {
+        display: table;
+        float: left;
+        vertical-align: middle;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        z-index: 9;
+        transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            z-index: -1;
+            right: -50px;
+            width: 50%;
+            transform: skew(30deg);
+            background: #fff;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+            right: 10%;
+            width: 300px;
+            background: #fff;
+            z-index: -1;
+        }
+        a {
+            line-height: 70px;
+            img {
+                width: 180px;
+            }
+        }
+    }
+    .toggle-btn {
+        display: none;
+        float: right;
+        line-height: 70px;
+        font-size: 20px;
+        color: #fff;
+    }
+    .menu {
+        ul {
+            float: right;
+            li {
+                display: inline-block;
+                line-height: 70px;
+                // padding: 0 20px;
+                transform: skew(30deg);
+                &.active {
+                    color: #020101;
+                    background: $secondary-color;
+                    box-shadow: 0 0 5px 2px #00000024;
+                    &:hover a {
+                        color: #fff;
+                    }
+                }
+                &:hover {
+                    a {
+                        color: $secondary-color;
+                    }
+                }
+                a {
+                    display: block;
+                    padding: 0px 25px;
+                    color: #fff;
+                    letter-spacing: 1px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    transition: all 0.5s ease;
+                    transform: skew(-30deg);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    
+    nav {
+        .logo {
+            a {
+                img {
+                    width: 120px !important;
+                }
+            }
+            &::after {
+                right: -10% !important;
+            }
+        }
+        .toggle-btn {
+            display: block !important;
+        }
+        ul {
+            display: none;
+            transition: all 0.5s;
+            &.show {
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                background: $primary-color;
+                top: 70px;
+                left: 0;
+                text-align: center;
+                transition: all 0.5s ease;
+                display: block;
+                li {
+                    display: block !important;
+                    transform: skew(0deg) !important;
+                    a {
+                        transform: skew(0deg) !important;
+                    }
+                }
+            }
+        }
+    }
+}
