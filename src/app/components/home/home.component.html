@@ -1,1 +1,19 @@
-<p>home works!</p>
+<div class="main-container">
+    <div class="title">
+        <div class="left">
+            <h2>Global Report</h2>
+            <p>Last Updated on <b>30 June 2021, 3:01 PM</b></p>
+        </div>
+        <div class="right">
+            <p>Today 01 July 2021, 5:53 PM</p>
+        </div>
+    </div>
+    
+    <app-widget-card
+        [totalConfirmed]='totalConfirmed'
+        [totalActive]='totalActive'
+        [totalRecovered]='totalRecovered'
+        [totalDeaths]='totalDeaths'
+    ></app-widget-card>
+
+</div>

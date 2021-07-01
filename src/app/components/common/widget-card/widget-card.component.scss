@@ -1,0 +1,63 @@
+// @import '/src/styles.scss';
+
+.card {
+    border: none;
+    box-shadow: 0 0 15px 0 #00000018;
+    &.card-confirmed {
+        background: #fbff0052;
+        .card-title {
+            color: #ffbf00;
+        }
+        .card-footer {
+            background-color: #ffbf00;
+        }
+    }
+    &.card-active {
+        background: #007bff52;
+        .card-title {
+            color: #17a2b8;
+        }
+        .card-footer {
+            background-color: #17a2b8;
+        }
+    }
+    &.card-recovered {
+    background: #03ff3d52;
+        .card-title {
+            color: #1ec569;
+        }
+        .card-footer {
+            background-color: #1ec569;
+        }
+    }
+    &.card-death {
+        background: #ff001952;
+        .card-title {
+            color: #ff2a6f;
+        }
+        .card-footer {
+            background-color: #ff2a6f;
+        }
+    }
+    .card-body {
+        .card-title {
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            font-family:'Nunito', sans-serif;
+            text-shadow: 0px 1px #00000024;
+        }
+    }
+    .card-footer {
+        color: #fff;
+        border: none;
+        box-shadow: 0px -1px 5px 0px #00000024;
+        .card-text {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family:'Roboto', sans-serif;
+        }
+    }
+}
