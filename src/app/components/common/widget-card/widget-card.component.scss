@@ -1,8 +1,11 @@
 // @import '/src/styles.scss';
-
+.body-container {
+    margin-top: 20px;
+}
 .card {
     border: none;
     box-shadow: 0 0 15px 0 #00000018;
+    margin-bottom: 15px;
     &.card-confirmed {
         background: #fbff0052;
         .card-title {
@@ -59,5 +62,11 @@
             letter-spacing: 2px;
             font-family:'Roboto', sans-serif;
         }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .body-container {
+        margin-top: 0px;
     }
 }

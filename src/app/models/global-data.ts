@@ -1,8 +1,8 @@
-export interface GlobalDataSummery {
-    country ?: string,
-    confirmed ?: number,
-    deaths ?: number,
-    recovered ?: number,
-    active ?: number,
-    last_update ?: string
+export class GlobalData {
+    [x: string]: any;
+    public confirmed!: number;
+    public deaths!: number;
+    public recovered!: number;
+    public active!: number;
+    public lastUpdate!: string;
 }

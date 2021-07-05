@@ -5,18 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { CountriesComponent } from './components/countries/countries.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WidgetCardComponent } from './components/common/widget-card/widget-card.component';
+import { ChartsModule } from 'ng2-charts';
+import { CountUpModule } from 'ngx-countup';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    CountriesComponent,
     AboutComponent,
     ContactComponent,
     WidgetCardComponent
@@ -24,7 +24,9 @@ import { WidgetCardComponent } from './components/common/widget-card/widget-card
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule,
+    CountUpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

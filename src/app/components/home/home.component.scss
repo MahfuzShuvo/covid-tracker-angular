@@ -1,10 +1,23 @@
 .title {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     .right {
-        p {
-            font-weight: bold;
+        select {
+            line-height: 35px;
+            width: 300px;
+            height: 35px;
+            border: 1px solid #d4f1f4;
+            border-radius: 5px;
+            font-size: 13px;
+            padding: 0px 10px;
+            outline: none;
+            box-shadow: none;
+            margin-bottom: 5px;
+            color: #888;
         }
     }
 }
+// .chart {
+//     margin: 20px 15px;
+// }

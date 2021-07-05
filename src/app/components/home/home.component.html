@@ -1,19 +1,43 @@
 <div class="main-container">
     <div class="title">
         <div class="left">
-            <h2>Global Report</h2>
-            <p>Last Updated on <b>30 June 2021, 3:01 PM</b></p>
+            <h2>Covid-19 Outbreak</h2>
+            <p>Last Updated on <b>{{ data.lastUpdate | date: 'longDate' }}</b></p>
         </div>
         <div class="right">
-            <p>Today 01 July 2021, 5:53 PM</p>
+            <select #input class="form-control" id="country" (change)='selectCountry(input.value)'>
+                <option selected value="global">Global</option>
+                <option value="{{country}}" *ngFor='let country of countries'>{{ country }}</option>
+            </select>
         </div>
     </div>
     
+    <!-- card-component  -->
     <app-widget-card
-        [totalConfirmed]='totalConfirmed'
-        [totalActive]='totalActive'
-        [totalRecovered]='totalRecovered'
-        [totalDeaths]='totalDeaths'
+        [totalConfirmed]='data.confirmed | number'
+        [totalActive]='(data.confirmed - (data.recovered + data.deaths)) | number'
+        [totalRecovered]='data.recovered | number'
+        [totalDeaths]='data.deaths | number'
     ></app-widget-card>
+
+    <!-- google-pie-chart -->
+    <div class="chart mt-5">
+        <div class="chart-wrapper">
+            <canvas *ngIf="global" baseChart
+                [chartType] = 'lineChartType'
+                [datasets] = 'lineChartData'
+                [labels] = 'lineChartLabels'
+                [colors] = 'lineChartColors'
+            >
+            </canvas>
+            <canvas *ngIf="!global" baseChart
+                [chartType] = 'barChartType'
+                [datasets] = 'barChartData'
+                [labels] = 'barChartLabels'
+                [colors] = 'barChartColors'
+            >
+            </canvas>
+        </div>
+    </div>
 
 </div>

@@ -4,7 +4,10 @@
     background: $primary-color;
     display: flow-root;
     padding: 0 10%;
-    box-shadow: 0 0 5px 2px #ccc;
+    box-shadow: 0 0 5px 2px #00000036;
+    position: fixed;
+    width: 100vw;
+    z-index: 1;
     .logo {
         display: table;
         float: left;
