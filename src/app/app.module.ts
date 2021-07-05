@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { WidgetCardComponent } from './components/common/widget-card/widget-card.component';
 import { ChartsModule } from 'ng2-charts';
 import { CountUpModule } from 'ngx-countup';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CountUpModule } from 'ngx-countup';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    WidgetCardComponent
+    WidgetCardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

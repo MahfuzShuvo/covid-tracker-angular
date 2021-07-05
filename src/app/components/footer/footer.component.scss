@@ -1,0 +1,76 @@
+@import '/src/styles.scss';
+
+.covid-footer {
+    bottom: 0;
+    width: 100%;
+    background-color: $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 10%;
+    box-shadow: 0px -1px 5px 0px #00000024;
+    .copyright-text {
+        margin: 10px 0;
+        p {
+            color: $primary-color;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: left;
+            span {
+                color: #fff;
+            }
+        }
+    }
+    .social-media-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin: 10px 0;
+        .ico {
+            height: 30px;
+            position: relative;
+            width: 30px;
+            border-radius: 50%;
+            background: $primary-color;
+            box-shadow: 0 0 10px 4px #00000082;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            &.facebook:hover {
+                // border: 1px solid #007bff;
+                background: #fff;
+                a {
+                    color: #007bff;
+                }
+            }
+            &.github:hover {
+                // border: 1px solid #222;
+                background: #fff;
+                a {
+                    color: #222;
+                }
+            }
+            &.linkedin:hover {
+                // border: 1px solid #2867B2;
+                background: #fff;
+                a {
+                    color: #2867B2;
+                }
+            }
+            a {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-decoration: none;
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 850px) {
+    .covid-footer {
+        padding: 0 5%;
+    }
+}

@@ -4,7 +4,7 @@
     overflow: hidden;
     margin: 10px 0;
     box-shadow: 0 0 15px 0 #00000018;
-    min-height: 475px;
+    min-height: 500px;
     .sub-title {
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
@@ -14,7 +14,7 @@
             background: #ff246b8c;
         }
         &.prev {
-            background: #5acdd28c;
+            background: #28a7458c;
         }
         h3 {
             text-align: center;
@@ -41,5 +41,11 @@
                 margin-left: 20px;
             }
         }
+    }
+}
+.source {
+    margin-top: 20px;
+    ul {
+        padding: 0 30px;
     }
 }
