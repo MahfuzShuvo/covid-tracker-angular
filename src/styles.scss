@@ -20,7 +20,7 @@ $navy-blue: #05445e;
 body {
     font-size: 13px;
     font-family: 'Nunito', sans-serif;
-    background: $baby-light-blue;
+    background: #f3f3f3;
     color: #888;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -32,7 +32,7 @@ p {
 }
 .main-container {
     display: flow-root;
-    padding: 90px 140px;
+    padding: 90px 10%;
     min-height: 100vh;
     .title {
         h2 {
